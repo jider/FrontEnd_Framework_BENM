@@ -1,0 +1,72 @@
+{
+  "name": "frontend_framework_BENM",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Front-End Framework using Gulp / Backbone - Marionette / ExpressJS / NodeJS / MongoDB / Handlebars",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "env": "env",
+    "publish": "echo \"Don't publish me, bro!\" && exit 1",
+    "clean:dependencies": "rm -rf node_modules"
+  },
+  "author": "Ignacio Díaz Rovina <velanor@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jider/FrontEnd_Framework_BENM.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jider/FrontEnd_Framework_BENM/issues"
+  },
+  "homepage": "https://github.com/jider/FrontEnd_Framework_BENM",
+  "browser": {
+    "jquery": "./node_modules/foundation-sites/js/vendor/jquery.js",
+    "foundation": "./node_modules/foundation-sites/js/foundation.js",
+    "underscore": "backbone/node_modules/underscore"
+  },
+  "browserify-shim": {
+    "jquery": "$",
+    "foundation": "foundation"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      "hbsfy"
+    ]
+  },
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "browserify": "^10.2.4",
+    "browserify-shim": "^3.8.9",
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-changed": "^1.2.1",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-streamify": "0.0.5",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "handlebars": "^3.0.3",
+    "hbsfy": "^2.2.1",
+    "lodash": "^3.9.3",
+    "map-stream": "0.0.6",
+    "merge-stream": "^0.1.7",
+    "pretty-hrtime": "^1.0.0",
+    "require-dir": "^0.3.0",
+    "sassdoc": "^2.1.15",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3"
+  },
+  "dependencies": {
+    "backbone": "^1.2.1",
+    "backbone.marionette": "^2.4.2",
+    "express": "^4.13.1",
+    "express-handlebars": "^2.0.1",
+    "foundation-sites": "^5.5.2",
+    "md5": "^2.0.0"
+  }
+}
